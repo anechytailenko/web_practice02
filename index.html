@@ -1,0 +1,88 @@
+<!DOCTYPE>
+<html lang = "en">
+<head>
+    <title>Paradise Travel</title>
+</head>
+<body style = "min-height: 100vh; background-image: url('assets/IMG_6483.JPG'); background-repeat: no-repeat; background-position: right top; background-size:45% 100%;">
+
+<h1><i>Paradise Travel Agency</i></h1>
+<p>We will choose the best suitable trip for u. Please fill in the details below:</p>
+
+<form action="https://display-parameters.com/" method="get">
+    <fieldset style="width: 50%; margin-bottom: 1%;">
+        <legend>Traveler</legend>
+
+        <label for="fullname">Full name:</label>
+        <input id="fullname" name="fullname" type="text" required />
+
+        <br/>
+
+        <label for="phone">Telephone:</label>
+        <input id="phone" name="phone" type="tel" placeholder="+380 99 123 45 67">
+
+        <br/>
+
+        <label>Age group:</label><br/>
+        <input type="radio" id="under18" name="age" value="under18">
+        <label for="under18">Under 18</label><br/>
+        <input type="radio" id="18-30" name="age" value="18-30">
+        <label for="18-30">18-30</label><br/>
+        <input type="radio" id="31-50" name="age" value="31-50">
+        <label for="31-50">31-50</label><br/>
+        <input type="radio" id="51plus" name="age" value="51plus">
+        <label for="51plus">51+</label><br/>
+
+    </fieldset>
+
+    <fieldset style="width: 50%; margin-bottom: 1%;">
+        <legend>Trip preferences</legend>
+
+        <label for="country">Preferred country:</label>
+        <input list="countries" id="country" name="country">
+        <datalist id="countries">
+            <option value="Italy">
+            <option value="Spain">
+            <option value="Greece">
+            <option value="Turkey">
+            <option value="Thailand">
+            <option value="Japan">
+            <option value="USA">
+        </datalist>
+
+        <br/>
+
+        <label for="budget">Budget (EUR):</label>
+        <input id="budget" name="budget" type="range" min="100" max="10000" step="50" value="1500" oninput="budgetVal.value = this.value">
+        <output id="budgetVal">1500</output>
+
+        <br/>
+
+        <label for="startDate">Preferred departure date:</label>
+        <input type="date" id="startDate" name="startDate" min="2025-09-19">
+    </fieldset>
+
+    <fieldset style="width: 50%; margin-bottom: 1%;">
+        <legend>Extras & Notes</legend>
+
+        <label>Travel type:</label><br/>
+        <input type="checkbox" id="travelType1" name="travelType1" value="Relaxation">
+        <label for="travelType1"> Relaxation</label><br>
+        <input type="checkbox" id="travelType2" name="travelType2" value="Adventure">
+        <label for="travelType2"> Adventure</label><br>
+        <input type="checkbox" id="travelType3" name="travelType3" value="Culture">
+        <label for="travelType3"> Culture</label><br/>
+        <input type="checkbox" id="travelType4" name="travelType4" value="Romantic">
+        <label for="travelType3"> Romantic</label><br/>
+        <input type="checkbox" id="travelType5" name="travelType5" value="Family">
+        <label for="travelType3"> Family</label><br/>
+
+        <br/>
+
+        <label for="notes">Additional notes:</label><br/>
+        <textarea id="notes" name="notes" rows="4" cols="50" placeholder="Your message here..."></textarea>
+    </fieldset>
+    <button type="submit" style="background-color:#4CAF50; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; font-size:16px;">Find my trip</button>
+    <button type="reset" style="background-color:#f44336; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; font-size:16px; margin-left:1%;">Reset</button>
+</form>
+</body>
+</html>
